@@ -17,6 +17,7 @@
     <!--Header Section-->
 
     <header class="header">
+      <h3 class="header__logo-mobile"><span class="logo__part">Web</span>Studio</h3>
       <div class="container">
         <h3 class="header__logo"><span class="logo__part">Web</span>Studio</h3>
         <nav class="header__navigation">
@@ -45,15 +46,59 @@
           </ul>
         </div>
       </div>
+
+      <button
+        class="js-open-menu button button--toggle-menu header-btn"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+      <svg class="menu-header-symbol" width="40px" height="40px">
+        <use href="./images/icons.svg/symbol-menu.svg#icon-menu_40px " />
+      </svg>
     </header>
+
+      <div class="js-menu-container">
+      <button class="js-close-menu button button-close-menu">&times;</button>
+
+      <nav class="header__navigation">
+          <ul>
+            <li><a href="./index.html" class="active" >Studio</a></li>
+            <li><a href="./portfolio.html" class="active">Portfolio</a></li>
+            <li><a href="#">Contacts</a></li>
+          </ul>
+        </nav>
+        <div class="header__contacts">
+          <ul class="list__contacts">
+            <li>
+              <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+            </li>
+            <li>         
+              <a href="tel:+12127724150">+1 212-772-4150</a>
+            </li>
+          </ul>
+        </div>
+      
+      </button>
+
+    <ul class="js-menu__list">
+      <li>
+        <a href="https://www.instagram.com" target="_blank" >Instagram</a>
+      </li>
+      <li>
+        <a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+      <li><a href="https://www.facebook.com" target="_blank" >Facebook</a></li>
+      <li> <a href="https://www.linkedin.com" target="_blank" >Linkedin</a></li>
+    </ul>
+    </div>
 
     <main>
       <!--Hero Section-->
 
       <section class="main__hero">
+      
         
           <h1 class="main-hero__title">
-            EFFECTIVE SOLUTIONS FOR<br /><span class="hero-title__text"
+            EFFECTIVE SOLUTIONS FOR<span class="hero-title__text"
               >YOUR BUSINESS
             </span>
           </h1>
@@ -70,7 +115,7 @@
         <div class="container">                     
           <ul>
             <li> 
-              <svg class="about__icon" >
+              <svg class="about__icon">
                 <use href="./images/icons.svg/symbol-defs.svg#icon-antenna" />
               </svg>             
               <h3 class="main-about__title">ATTENTION TO DETAILS</h3>
@@ -103,7 +148,7 @@
             </li>
 
             <li>               
-               <svg class="about__icon" >
+               <svg class="about__icon"  >
                 <use href="./images/icons.svg/symbol-defs.svg#icon-astronaut" />
               </svg>                     
               <h3 class="main-about__title">MODERN TECHNOLOGIES</h3>
@@ -152,10 +197,11 @@
           <div class="team__cards">
             <div class="our-team__card1">
               <img
+                srcset="./images/christopherwalker.jpg 1x, ./images/Christopher-Walker@x2.jpg 2x"
                 src="./images/christopherwalker.jpg"
-                alt="Christopher Walker"
-                width="270"
+                alt="Christopher Walker"         
               />
+
 
               <h3 class="main-team__subtitle">Christopher Walker</h3>
               <p class="main-team__text prod__text">Product Designer</p>
@@ -193,9 +239,10 @@
 
             <div class="our-team__card2">
               <img
+               srcset="./images/kylieevans.jpg 1x,./images/Kylie-Evans@x2.jpg 2x " 
                 src="./images/kylieevans.jpg"
                 alt="Kylie Evans"
-                width="270"
+            
               />
 
               <h3 class="main-team__subtitle">Kylie Evans</h3>
@@ -234,9 +281,10 @@
 
             <div class="our-team__card3">
               <img
+              srcset="./images/ryanharris.jpg 1x,./images/Ryan-Harris@x2.jpg 2x"
                 src="./images/ryanharris.jpg"
                 alt="Ryan Harris"
-                width="270"
+              
               />
 
               <h3 class="main-team__subtitle">Ryan Harris</h3>
@@ -275,9 +323,10 @@
 
             <div class="our-team__card4">
               <img
+              srcset="./images/tylermoore.jpg 1x, ./images/Tyler-Moore@x2.jpg 2x"
                 src="./images/tylermoore.jpg"
-                alt="tyler Moore"
-                width="270"
+                alt="Tyler Moore"
+     
               />
 
               <h3 class="main-team__subtitle">Tyler Moore</h3>
@@ -488,6 +537,7 @@
      <button button type="submit" class="modal-btn">Send</button>
     </div>
   </div>
-    <script src="./modal.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/header-nav.js"></script>
   </body>
 </html>

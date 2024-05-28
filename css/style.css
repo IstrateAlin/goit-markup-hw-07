@@ -25,10 +25,12 @@ body {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 .container {
-  width: 1600px;
+  max-width: 1600px;
+  width: 100%;
   margin-left: 215px;
 }
 
@@ -39,6 +41,10 @@ img {
   align-items: center;
   background-color: var(--white);
   border: 1px solid rgba(236, 236, 236, 1);
+}
+
+.header {
+  position: relative;
 }
 
 .header__navigation ul {
@@ -188,6 +194,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .main__about ul {
@@ -277,6 +284,7 @@ img {
   gap: 30px;
   justify-content: center;
   border-radius: 0px, 0px, 4px, 4px;
+  flex-wrap: wrap;
 }
 
 .main-team__title {
@@ -295,6 +303,7 @@ img {
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  width: 270px;
 }
 
 .main-team__subtitle {
@@ -371,6 +380,7 @@ img {
   gap: 30px;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .customers__icon {
@@ -804,4 +814,442 @@ img {
   justify-content: center;
   align-items: center;
   margin: 20px auto 0;
+}
+
+.header__logo-mobile {
+  display: none;
+}
+
+.js-menu-container {
+  display: none;
+  background-color: var(--white);
+  color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+
+.js-menu__list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin-left: 40px;
+  margin-top: 35px;
+  flex-wrap: wrap;
+}
+
+.js-menu__list a {
+  text-decoration: none;
+  color: var(--blue);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+}
+
+.js-menu__list :not(:last-child)::after {
+  content: '';
+  border: 1px solid var(--icons-gray);
+  width: 22px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.is-open {
+  display: block;
+}
+
+.js-open-menu {
+  display: none;
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .main__hero {
+    background-image: linear-gradient(
+        0deg,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero-img@2x.jpg);
+  }
+}
+
+@media screen and (max-width: 428px), (max-width: 727px) {
+  .container {
+    width: auto;
+    padding: 0 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header__logo-mobile {
+    display: block;
+    text-decoration: none;
+    font-family: var(--secondary-font);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2em;
+    margin-top: 24px;
+    margin-bottom: 25px;
+    padding: 0 15px;
+  }
+
+  .header-btn {
+    max-width: 428px;
+    position: absolute;
+    top: -6px;
+    right: 50px;
+    border: none;
+    background-color: var(--white);
+  }
+
+  .menu-header-symbol {
+    stroke: black;
+    cursor: pointer;
+  }
+
+  .menu-header-symbol:hover {
+    stroke: var(--blue);
+    fill: var(--blue);
+  }
+
+  .js-open-menu {
+    display: block;
+  }
+
+  .js-menu-container button {
+    color: var(--black);
+  }
+
+  .js-close-menu {
+    display: block;
+    font-size: 30px;
+    color: var(--black);
+    margin-left: auto;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  .js-close-menu:hover {
+    color: var(--blue);
+  }
+
+  .header .container {
+    display: none;
+  }
+
+  .header__logo-mobile,
+  .logo__part {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.18px;
+    letter-spacing: 0.03em;
+  }
+
+  .main__hero {
+    width: auto;
+    height: 400px;
+    margin-left: 0;
+    padding-left: 15px;
+    margin-bottom: 60px;
+  }
+  .main-hero__title {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 42px;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+
+  .about__icon {
+    padding: 25px 0;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .main__ocupation .container {
+    display: none;
+  }
+
+  .main__team .container {
+    margin-top: 60px;
+  }
+  .main-about__title {
+    text-align: center;
+  }
+
+  .main-about__text {
+    margin: auto;
+    width: 100%;
+  }
+
+  .our-team__card1,
+  .our-team__card2,
+  .our-team__card3,
+  .our-team__card4 {
+    width: 100%;
+  }
+
+  .customers__title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 32.81px;
+    letter-spacing: 0.03em;
+  }
+
+  .footer .container {
+    flex-direction: column;
+    height: auto;
+    gap: 0;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+  }
+
+  .footer__title {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .footer__address ul {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .social__title {
+    padding-top: 0;
+    text-align: center;
+  }
+
+  .footer__icons {
+    justify-content: center;
+  }
+
+  .sub-form__position {
+    align-items: center;
+  }
+
+  .subscribe-input {
+    width: 95%;
+  }
+
+  .sub-btn {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  [data-modal-content] {
+    width: 419px;
+    height: 609px;
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+
+  .header__contacts ul {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: 40px;
+    margin-top: 170px;
+    gap: 36px;
+  }
+
+  .header__contacts a {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28.13px;
+    letter-spacing: 0.02em;
+  }
+
+  .header__navigation ul {
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 40px;
+  }
+  .header__navigation a {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 46.88px;
+    letter-spacing: 0.02em;
+  }
+}
+
+@media screen and (min-width: 729px) and (max-width: 1157px) {
+  .container {
+    width: auto;
+    padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0 auto;
+  }
+
+  .main__hero {
+    width: auto;
+    height: 400px;
+    margin-left: 0;
+    padding-left: 15px;
+    margin-bottom: 60px;
+  }
+
+  .header .container {
+    border: none;
+  }
+
+  .header__logo {
+    margin-left: 15px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.18px;
+    letter-spacing: 0.03em;
+  }
+
+  .header__contacts ul {
+    margin-left: 104px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .header__contacts a {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.06px;
+    letter-spacing: 0.02em;
+  }
+
+  .envelope {
+    width: 14px;
+    height: 10px;
+  }
+
+  .smartphone {
+    width: 10px;
+    height: 14px;
+  }
+
+  .main-hero__title {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 42px;
+    letter-spacing: 0.06em;
+  }
+
+  .main__about .container ul {
+    margin-bottom: 35px;
+  }
+  .about__icon {
+    padding: 25px 177px;
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  .main-about__text {
+    width: 300px;
+  }
+
+  .main__ocupation .container {
+    display: none;
+  }
+  .main__team .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .main-team__title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 32.81px;
+    letter-spacing: 0.03em;
+  }
+
+  .our-team__card1,
+  .our-team__card2,
+  .our-team__card3,
+  .our-team__card4 {
+    width: 354px;
+    height: 534px;
+  }
+
+  .customers__title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 32.81px;
+    letter-spacing: 0.03em;
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+
+  .customers__icon {
+    padding: 16px 59px;
+  }
+
+  .footer .container {
+    margin-top: 60px;
+    position: relative;
+    height: 464px;
+    gap: 0;
+    justify-content: space-around;
+  }
+
+  .footer__title {
+    margin-left: 90px;
+  }
+
+  .footer__text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.41px;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+
+  .footer__address ul {
+    margin-left: 71px;
+    text-align: center;
+  }
+
+  .social__title {
+    text-align: center;
+  }
+
+  .footer__subscribe {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sub-form__position {
+    text-align: center;
+    padding-top: 60px;
+    margin-left: 50%;
+  }
+
+  .sub-btn {
+    margin-top: 20px;
+    margin-left: 50%;
+  }
+
+  .subscribe-input {
+    width: 450px;
+    height: 50px;
+  }
+}
+
+@media screen and (min-width: 1157px) {
+  .container {
+    width: auto;
+    padding: 15px 55px;
+  }
+
+  ..header__contacts ul {
+    margin-left: 339px;
+  }
 }
